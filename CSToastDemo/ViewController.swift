@@ -28,18 +28,18 @@ class ViewController: UIViewController {
     
     @IBAction func showInWindow(_ sender: Any) {
         
-        CSToast.show(text: "I am in window.")
+        CSToast.show("I am in window.")
     }
     
     @IBAction func showInView(_ sender: UIButton) {
         
-        CSToast.show(text: "I am in view.") {
+        CSToast.show("I am in view.") {
             $0.inView = sender
         }
     }
     
     func welcomeToast() {
-        CSToast.show(text: "Welcome to CSToast !", duration: 2) { (toast) in
+        CSToast.show("Welcome to CSToast !", duration: 2) { (toast) in
             toast.fontSize = 16
             toast.textColor = .green
             toast.bgColor = .brown

@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "Toast"
+  s.name         = "CSToast"
   s.version      = "0.0.1"
   s.summary      = "本工具是一个简单的提示框（Toast）"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
@@ -9,11 +9,9 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-
-  s.source       = { :git => 'https://github.com/JoslynWu/CSToast.git', :tag => s.version.to_s }
+  s.source       = { :git => 'https://github.com/JoslynWu/CSToast.git', :tag => s.version }
   
-  s.requires_arc = true
-  s.source_files = 'Sources/*.{swift}'
-  s.public_header_files = 'Sources/*.{swift}'
+  s.source_files = 'Sources/*.swift'
 
 end
+

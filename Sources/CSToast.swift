@@ -42,9 +42,9 @@ let Default_bg_Alpha: CGFloat = 0.8
 
 class CSToast: UIView {
     
-    static private let shared = CSToast()
-    private var showText: String?
-    private var duration: CGFloat?
+    static fileprivate let shared = CSToast()
+    fileprivate var showText: String?
+    fileprivate var duration: CGFloat?
     
     
     // MARK: -----------------------public-----------------------------
@@ -54,15 +54,15 @@ class CSToast: UIView {
     /// - Parameters:
     ///   - text: 文字
     ///   - duration: 显示时间
-    static func show(text: String, duration: CGFloat) {
-        show(text: text, duration: duration, config: nil)
+    static func show(_ text: String, duration: CGFloat) {
+        show(text, duration: duration, config: nil)
     }
 
-    static func show(text: String, config: @escaping ((_ toast: CSToast) -> Void)) {
-        show(text: text, duration: Default_Duration, config: config)
+    static func show(_ text: String, config: @escaping ((_ toast: CSToast) -> Void)) {
+        show(text, duration: Default_Duration, config: config)
     }
     
-    static func show(text: String, duration: CGFloat = Default_Duration, config: ((_ toast: CSToast) -> Void)? = nil) {
+    static func show(_ text: String, duration: CGFloat = Default_Duration, config: ((_ toast: CSToast) -> Void)? = nil) {
         shared.recoverDefaultConfig()
         shared.showText = text;
         shared.duration = duration;
@@ -84,13 +84,13 @@ class CSToast: UIView {
     
     
     // MARK: -----------------------private-----------------------------
-    private func setupToast() {
+    fileprivate func setupToast() {
         toastView.addSubview(msgLabel)
-        setText(text: showText!)
+        setText(showText!)
         showToast()
     }
     
-    private func recoverDefaultConfig() {
+    fileprivate func recoverDefaultConfig() {
         duration = Default_Duration
         fontSize = Default_Font_Size
         textColor = .white
@@ -100,7 +100,7 @@ class CSToast: UIView {
         bottom = nil
     }
     
-    private func setText(text: String) {
+    fileprivate func setText(_ text: String) {
         if self.fontSize < Default_min_Font_Size {
             self.fontSize = Default_min_Font_Size
         } else if self.fontSize > Default_max_Font_Size {
@@ -118,7 +118,7 @@ class CSToast: UIView {
         msgLabel.textColor = textColor
     }
     
-    private func showAnimation() {
+    fileprivate func showAnimation() {
         if toastView.alpha > Default_bg_Alpha {
             toastView.alpha = Default_bg_Alpha
         }
@@ -127,7 +127,7 @@ class CSToast: UIView {
         }
     }
     
-    @objc private func hideAnimation() {
+    @objc fileprivate func hideAnimation() {
         UIView.animate(withDuration: 0.25, animations: { 
             self.toastView.alpha = 0
         }, completion: { (finish) in
@@ -135,15 +135,15 @@ class CSToast: UIView {
         })
     }
     
-    private func dismissToast() {
+    fileprivate func dismissToast() {
         toastView.removeFromSuperview()
     }
     
-    private func showToast() {
-        showInView(view: inView, center: showWithCenter())
+    fileprivate func showToast() {
+        showInView(inView, center: showWithCenter())
     }
     
-    private func showWithCenter() -> CGPoint {
+    fileprivate func showWithCenter() -> CGPoint {
         let center = CGPoint(x: inView.bounds.size.width * 0.5, y: inView.bounds.size.height * 0.5)
         if inView != UIApplication.shared.keyWindow! {
             return center
@@ -159,7 +159,7 @@ class CSToast: UIView {
         return center
     }
     
-    private func showInView(view: UIView, center: CGPoint) {
+    fileprivate func showInView(_ view: UIView, center: CGPoint) {
         if toastView.superview != view {
             toastView.removeFromSuperview()
             view.addSubview(toastView)
