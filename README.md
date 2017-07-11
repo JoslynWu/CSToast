@@ -6,7 +6,7 @@
 
 ## 效果
 
-![](/resource/CSToast.gif)
+![](/effect/CSToast.gif)
 
 ##  关于工具:
 
@@ -25,6 +25,10 @@
 ```
 CSToast.swift
 ```
+
+**或**
+
+`pod 'Toast'`
  
 ##  关于说明
 

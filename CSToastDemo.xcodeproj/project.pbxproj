@@ -12,7 +12,7 @@
 		9E68364A1EA88729009467F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E6836481EA88729009467F8 /* Main.storyboard */; };
 		9E68364C1EA88729009467F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E68364B1EA88729009467F8 /* Assets.xcassets */; };
 		9E68364F1EA88729009467F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E68364D1EA88729009467F8 /* LaunchScreen.storyboard */; };
-		9E6836581EA88759009467F8 /* CSToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6836571EA88759009467F8 /* CSToast.swift */; };
+		9ED7735B1F147366007ED76D /* CSToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED7735A1F147366007ED76D /* CSToast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		9E68364B1EA88729009467F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E68364E1EA88729009467F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E6836501EA88729009467F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E6836571EA88759009467F8 /* CSToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSToast.swift; sourceTree = "<group>"; };
+		9ED7735A1F147366007ED76D /* CSToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSToast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +40,7 @@
 		9E6836381EA88729009467F8 = {
 			isa = PBXGroup;
 			children = (
+				9ED773591F147366007ED76D /* Sources */,
 				9E6836431EA88729009467F8 /* CSToastDemo */,
 				9E6836421EA88729009467F8 /* Products */,
 			);
@@ -56,7 +57,6 @@
 		9E6836431EA88729009467F8 /* CSToastDemo */ = {
 			isa = PBXGroup;
 			children = (
-				9E6836561EA88730009467F8 /* lib */,
 				9E6836441EA88729009467F8 /* AppDelegate.swift */,
 				9E6836461EA88729009467F8 /* ViewController.swift */,
 				9E6836481EA88729009467F8 /* Main.storyboard */,
@@ -67,12 +67,12 @@
 			path = CSToastDemo;
 			sourceTree = "<group>";
 		};
-		9E6836561EA88730009467F8 /* lib */ = {
+		9ED773591F147366007ED76D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				9E6836571EA88759009467F8 /* CSToast.swift */,
+				9ED7735A1F147366007ED76D /* CSToast.swift */,
 			);
-			path = lib;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E6836471EA88729009467F8 /* ViewController.swift in Sources */,
-				9E6836581EA88759009467F8 /* CSToast.swift in Sources */,
+				9ED7735B1F147366007ED76D /* CSToast.swift in Sources */,
 				9E6836451EA88729009467F8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
